@@ -1,4 +1,34 @@
+import WebLogo from "../public/images/web_code.png";
+import Image from "next/image";
+
 export default function Features() {
+  const services = [
+    {
+      service: "Web Development",
+      intro:
+        "Crafting interactive and user-centric websites that leave a lasting digital impression. Your online presence, our expertise.",
+    },
+    {
+      service: "App Development",
+      intro:
+        "Transforming ideas into intuitive and innovative mobile applications. We breathe life into your app concepts.",
+    },
+    {
+      service: "SEO",
+      intro:
+        "Boosting your online visibility and driving organic traffic. Elevate your search engine rankings and dominate the digital landscape.",
+    },
+    {
+      service: "Content Writing",
+      intro:
+        "Words that resonate, content that captivates. Our expert writers craft compelling narratives tailored to your audience.",
+    },
+    {
+      service: "Graphic Design",
+      intro:
+        "Visual storytelling at its finest. From logos to branding, we design graphics that speak volumes and leave a memorable impact.",
+    },
+  ];
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -23,36 +53,19 @@ export default function Features() {
           >
             {/* 1st item */}
             <div
-              className="relative flex flex-col items-center"
+              className="relative flex flex-col items-center "
               data-aos="fade-up"
               data-aos-anchor="[data-aos-id-blocks]"
             >
-              <svg
-                className="w-16 h-16 mb-4"
-                viewBox="0 0 64 64"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  className="fill-current text-purple-600"
-                  width="64"
-                  height="64"
-                  rx="32"
+              <div className="bg-purple-600  rounded-full">
+                <Image
+                  src={WebLogo}
+                  alt="Web Logo"
+                  width={50}
+                  height={50}
+                  className="m-3"
                 />
-                <path
-                  className="stroke-current text-purple-100"
-                  d="M30 39.313l-4.18 2.197L27 34.628l-5-4.874 6.91-1.004L32 22.49l3.09 6.26L42 29.754l-3 2.924"
-                  strokeLinecap="square"
-                  strokeWidth="2"
-                  fill="none"
-                  fillRule="evenodd"
-                />
-                <path
-                  className="stroke-current text-purple-300"
-                  d="M43 42h-9M43 37h-9"
-                  strokeLinecap="square"
-                  strokeWidth="2"
-                />
-              </svg>
+              </div>
               <h4 className="h4 mb-2 ">Web Developement</h4>
               <p className="text-lg text-gray-400 text-center">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse
