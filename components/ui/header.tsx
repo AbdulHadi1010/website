@@ -1,5 +1,6 @@
 import Link from "next/link";
 import MobileMenu from "./mobile-menu";
+// import ScrollToComponent from "../ScrollToComponent";
 
 export default function Header() {
   return (
@@ -34,29 +35,31 @@ export default function Header() {
               </li>
               <li>
                 <Link
-                  href="/"
-                  className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
-                >
-                  About us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
+                  href="#our-services-section"
                   className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 >
                   Our Services
                 </Link>
               </li>
-
               <li>
                 <Link
-                  href="/"
+                  href="#about-us-section"
+                  className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                >
+                  About us
+                </Link>
+              </li>
+
+              {/* <ScrollToComponent target="contact-us-section"> */}
+              <li>
+                <Link
+                  href="#contact-us-section"
                   className="btn-sm text-white bg-purple-600 hover:bg-purple-700 ml-3"
                 >
                   Contact us
                 </Link>
               </li>
+              {/* </ScrollToComponent> */}
             </ul>
           </nav>
 
