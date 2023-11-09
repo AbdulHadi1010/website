@@ -79,15 +79,7 @@ export default function MobileMenu() {
           </li>
           <li>
             <Link
-              href="/"
-              className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
-            >
-              About us
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/"
+              href="#our-services-section"
               className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
             >
               Our Services
@@ -96,7 +88,16 @@ export default function MobileMenu() {
 
           <li>
             <Link
-              href="/"
+              href="#about-us-section"
+              className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+            >
+              About us
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="#contac-us-section"
               className="btn-sm text-white bg-purple-600 hover:bg-purple-700 ml-3"
             >
               Contact us
