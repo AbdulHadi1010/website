@@ -119,8 +119,8 @@ export default function Features() {
               </div>
               <h4 className="h4 mb-2">Digital Marketing</h4>
               <p className="text-lg text-gray-400 text-center">
-                Transforming ideas into impactful stories that leave a
-                lasting impression.
+                Strategize, optimize, and conquer the digital landscape
+                with our marketing.
               </p>
             </div>
 
@@ -163,9 +163,8 @@ export default function Features() {
               </div>
               <h4 className="h4 mb-2">Social Media Management</h4>
               <p className="text-lg text-gray-400 text-center">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat.
+                From strategy to scheduling – we manage your social
+                presence with finesse.
               </p>
             </div>
             {/* 6th item */}
