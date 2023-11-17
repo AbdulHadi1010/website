@@ -1,5 +1,10 @@
+// @ts-nocheck
+// @use-client
+"use client";
 import VideoThumb from "@/public/images/hero-image-01.jpg";
 import ModalVideo from "@/components/modal-video";
+import Spline from "@splinetool/react-spline";
+import { Suspense } from "react";
 
 export default function Hero() {
   return (
@@ -77,16 +82,11 @@ export default function Hero() {
               </div>
             </div> */}
           </div>
-
-          <ModalVideo
-            thumb={VideoThumb}
-            thumbWidth={1024}
-            thumbHeight={576}
-            thumbAlt="Modal video thumbnail"
-            video="/videos/video.mp4"
-            videoWidth={1920}
-            videoHeight={1080}
-          />
+          <Suspense fallback={<div>Loading...</div>}>
+            <div style={{}}>
+              <Spline scene="https://prod.spline.design/IeERgy98oXnbzQC0/scene.splinecode" />
+            </div>
+          </Suspense>
         </div>
       </div>
     </section>
