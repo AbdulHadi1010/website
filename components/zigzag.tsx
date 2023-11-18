@@ -1,5 +1,10 @@
-import Image from "next/image";
+"use client";
 
+import Image from "next/image";
+import Lottie from "lottie-react";
+import project from "@/public/images/project.json";
+import web from "@/public/images/web.json";
+import hybrid from "@/public/images/hybrid.json";
 import FeatImage01 from "@/public/images/features-03-image-01.png";
 import FeatImage02 from "@/public/images/features-03-image-02.png";
 import FeatImage03 from "@/public/images/features-03-image-03.png";
@@ -14,10 +19,10 @@ export default function Zigzag() {
             <div className="inline-flex text-sm font-semibold py-1 px-3 m-2 text-green-600 bg-green-200 rounded-full mb-4">
               Reach goals that matter
             </div>
-            <h1 className="h2 mb-4">One product, unlimited solutions</h1>
+            <h1 className="h2 mb-4">One team, unlimited solutions</h1>
             <p className="text-xl text-gray-400">
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit laborum — semper quis lectus nulla.
+              Collaborate seamlessly within a single team, unlocking limitless
+              solutions together.
             </p>
           </div>
 
@@ -30,13 +35,7 @@ export default function Zigzag() {
                 className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1"
                 data-aos="fade-up"
               >
-                <Image
-                  className="max-w-full mx-auto md:max-w-none h-auto"
-                  src={FeatImage01}
-                  width={540}
-                  height={405}
-                  alt="Features 01"
-                />
+                <Lottie animationData={project} loop={true} />
               </div>
               {/* Content */}
               <div
@@ -47,8 +46,8 @@ export default function Zigzag() {
                   <div className="font-architects-daughter text-xl text-purple-600 mb-2">
                     More speed. Less spend
                   </div>
-                  <h3 className="h3 mb-3">Keep projects on schedule</h3>
-                  <p className="text-xl text-gray-400 mb-4">
+                  <h3 className="h3 mb-3">Turning your Ideas into reality</h3>
+                  {/* <p className="text-xl text-gray-400 mb-4">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua.
@@ -84,7 +83,7 @@ export default function Zigzag() {
                       </svg>
                       <span>Amet consectetur adipiscing elit</span>
                     </li>
-                  </ul>
+                  </ul> */}
                 </div>
               </div>
             </div>
@@ -96,13 +95,7 @@ export default function Zigzag() {
                 className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 rtl"
                 data-aos="fade-up"
               >
-                <Image
-                  className="max-w-full mx-auto md:max-w-none h-auto"
-                  src={FeatImage02}
-                  width={540}
-                  height={405}
-                  alt="Features 02"
-                />
+                <Lottie animationData={web} loop={true} />
               </div>
               {/* Content */}
               <div
@@ -111,10 +104,12 @@ export default function Zigzag() {
               >
                 <div className="md:pl-4 lg:pl-12 xl:pl-16">
                   <div className="font-architects-daughter text-xl text-purple-600 mb-2">
-                    More speed. Less spend
+                    Innovate Tomorrow
                   </div>
-                  <h3 className="h3 mb-3">Keep projects on schedule</h3>
-                  <p className="text-xl text-gray-400 mb-4">
+                  <h3 className="h3 mb-3">
+                    Empowering Businesses through Software Innovation
+                  </h3>
+                  {/* <p className="text-xl text-gray-400 mb-4">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua.
@@ -150,7 +145,7 @@ export default function Zigzag() {
                       </svg>
                       <span>Amet consectetur adipiscing elit</span>
                     </li>
-                  </ul>
+                  </ul> */}
                 </div>
               </div>
             </div>
@@ -162,13 +157,7 @@ export default function Zigzag() {
                 className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1"
                 data-aos="fade-up"
               >
-                <Image
-                  className="max-w-full mx-auto md:max-w-none h-auto"
-                  src={FeatImage03}
-                  width={540}
-                  height={405}
-                  alt="Features 03"
-                />
+                <Lottie animationData={hybrid} loop={true} />
               </div>
               {/* Content */}
               <div
@@ -177,10 +166,12 @@ export default function Zigzag() {
               >
                 <div className="md:pr-4 lg:pr-12 xl:pr-16">
                   <div className="font-architects-daughter text-xl text-purple-600 mb-2">
-                    More speed. Less spend
+                    Bridging Platforms
                   </div>
-                  <h3 className="h3 mb-3">Keep projects on schedule</h3>
-                  <p className="text-xl text-gray-400 mb-4">
+                  <h3 className="h3 mb-3">
+                    Unleashing the Power of Hybrid Apps for a Unified Tomorrow
+                  </h3>
+                  {/* <p className="text-xl text-gray-400 mb-4">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua.
@@ -216,7 +207,7 @@ export default function Zigzag() {
                       </svg>
                       <span>Amet consectetur adipiscing elit</span>
                     </li>
-                  </ul>
+                  </ul> */}
                 </div>
               </div>
             </div>

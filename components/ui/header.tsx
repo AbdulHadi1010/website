@@ -1,18 +1,32 @@
+"use client";
+
 import Link from "next/link";
 import MobileMenu from "./mobile-menu";
 import Image from "next/image";
-import Logo from "../../public/images/mainLogo.png.png";
+import Logo from "../../public/images/logo.png";
 
 export default function Header() {
+  function launchEmail() {
+    const to = "icodebugz@gmail.com";
+    const subject = "Request for Booking a Schedule";
+
+    const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(subject)}`;
+
+    // Open the default email client
+    window.location.href = mailtoLink;
+  }
   return (
     <header className="absolute w-full z-30 ">
-      <div className="max-w-6xl  mx-auto px-4 sm:px-6">
+      <div className="max-w-6xl  py-4 mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-20">
           {/* Site branding */}
-          <div className="shrink-0 mr-4 ">
+          <div
+            className="shrink-0 mr-4"
+            // p-2 bg-white rounded-full
+          >
             {/* Logo */}
             <Link href="/" className="block" aria-label="Cruip">
-              <Image src={Logo} alt="Cruip" width={100} height={100} />
+              <Image src={Logo} alt="Cruip" width={75} height={75} />
             </Link>
           </div>
 
