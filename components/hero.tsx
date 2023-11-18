@@ -12,7 +12,7 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
         {/* Illustration behind hero content */}
         <div
-          className="absolute left-0 bottom-0 -ml-20 hidden lg:block pointer-events-none"
+          className="absolute  left-0 bottom-0 -ml-20 hidden lg:block pointer-events-none"
           aria-hidden="true"
           data-aos="fade-up"
           data-aos-delay="400"
@@ -63,28 +63,15 @@ export default function Hero() {
               specializing in crafting transformative software solutions,
               empowering businesses for a digital future.
             </p>
-            {/* <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
-              <div data-aos="fade-up" data-aos-delay="400">
-                <a
-                  className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0"
-                  href="#0"
-                >
-                  Start free trial
-                </a>
-              </div>
-              <div data-aos="fade-up" data-aos-delay="600">
-                <a
-                  className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4"
-                  href="#0"
-                >
-                  Learn more
-                </a>
-              </div>
-            </div> */}
           </div>
-          <Suspense fallback={<div>Loading...</div>}>
-            <div style={{}}>
-              <Spline scene="https://prod.spline.design/IeERgy98oXnbzQC0/scene.splinecode" />
+        </div>
+        <div className="justify-center">
+          <Suspense fallback={<div>Loading...</div>} st>
+            <div>
+              <Spline
+                scene="https://prod.spline.design/IeERgy98oXnbzQC0/scene.splinecode"
+                // style={{ width: "100%" }}
+              />
             </div>
           </Suspense>
         </div>
