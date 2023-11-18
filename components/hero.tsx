@@ -1,13 +1,21 @@
-import VideoThumb from "@/public/images/hero-image-01.jpg";
-import ModalVideo from "@/components/modal-video";
+"use client";
+import Spline from "@splinetool/react-spline";
+import { Suspense } from "react";
+import video from "../public/videos/animated.gif";
+import Image from "next/image";
 
 export default function Hero() {
+  const screenWidth = typeof window !== "undefined" ? window.innerWidth : 0;
+
+  // Condition for rendering image or video
+  const shouldRenderImage = screenWidth > 950;
+
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
         {/* Illustration behind hero content */}
         <div
-          className="absolute left-0 bottom-0 -ml-20 hidden lg:block pointer-events-none"
+          className="absolute z-0 left-0 bottom-0 -ml-20 hidden lg:block pointer-events-none"
           aria-hidden="true"
           data-aos="fade-up"
           data-aos-delay="400"
@@ -29,8 +37,8 @@ export default function Hero() {
                 y2="577.921"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#5D5DFF" stopOpacity=".01" />
-                <stop offset="1" stopColor="#5D5DFF" stopOpacity=".32" />
+                <stop stopColor="#06AADA" stopOpacity=".01" />
+                <stop offset="1" stopColor="#06AADA" stopOpacity=".32" />
               </linearGradient>
             </defs>
             <path
@@ -58,36 +66,24 @@ export default function Hero() {
               specializing in crafting transformative software solutions,
               empowering businesses for a digital future.
             </p>
-            {/* <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
-              <div data-aos="fade-up" data-aos-delay="400">
-                <a
-                  className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0"
-                  href="#0"
-                >
-                  Start free trial
-                </a>
-              </div>
-              <div data-aos="fade-up" data-aos-delay="600">
-                <a
-                  className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4"
-                  href="#0"
-                >
-                  Learn more
-                </a>
-              </div>
-            </div> */}
           </div>
-
-          <ModalVideo
-            thumb={VideoThumb}
-            thumbWidth={1024}
-            thumbHeight={576}
-            thumbAlt="Modal video thumbnail"
-            video="/videos/video.mp4"
-            videoWidth={1920}
-            videoHeight={1080}
-          />
         </div>
+        {shouldRenderImage ? (
+          <div className="justify-center z-90">
+            <Suspense fallback={<div>Loading...</div>}>
+              <div>
+                <Spline
+                  scene="https://prod.spline.design/IeERgy98oXnbzQC0/scene.splinecode"
+                  // style={{ width: "100%" }}
+                />
+              </div>
+            </Suspense>
+          </div>
+        ) : (
+          <div className="flex justify-center items-center">
+            <Image src={video} alt="Picture of the author" />
+          </div>
+        )}
       </div>
     </section>
   );
