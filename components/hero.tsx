@@ -1,18 +1,19 @@
 "use client";
-import Spline from "@splinetool/react-spline";
-import { Suspense } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import video from "../public/videos/animated.gif";
 import Image from "next/image";
+const Spline = React.lazy(() => import("@splinetool/react-spline"));
 
 export default function Hero() {
-  const screenWidth = typeof window !== "undefined" ? window.innerWidth : 0;
-
-  // Condition for rendering image or video
-  const shouldRenderImage = screenWidth > 950;
+  const [screenWidth, setScreenWidth] = useState(0);
+  // const [screenBig, setScreenBig] = useState(false);
+  useEffect(() => {
+    typeof window !== "undefined" ? setScreenWidth(window.innerWidth) : 0;
+  }, []);
 
   return (
     <section>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
+      <div className="max-w-6xl  mx-auto px-4 sm:px-6 relative">
         {/* Illustration behind hero content */}
         <div
           className="absolute z-0 left-0 bottom-0 -ml-20 hidden lg:block pointer-events-none"
@@ -51,9 +52,9 @@ export default function Hero() {
         </div>
 
         {/* Hero content */}
-        <div className="relative pt-32 pb-10 md:pt-40 md:pb-16">
+        <div className="relative pt-32  md:pt-40 ">
           {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
+          <div className="max-w-3xl   mx-auto text-center md:pb-16">
             <h1 className="h1 mb-4" data-aos="fade-up">
               Welcome to iCode Bugz !
             </h1>
@@ -68,20 +69,20 @@ export default function Hero() {
             </p>
           </div>
         </div>
-        {shouldRenderImage ? (
-          <div className="justify-center z-90">
-            <Suspense fallback={<div>Loading...</div>}>
-              <div>
-                <Spline
-                  scene="https://prod.spline.design/IeERgy98oXnbzQC0/scene.splinecode"
-                  // style={{ width: "100%" }}
-                />
-              </div>
+      </div>
+      <div>
+        {screenWidth > 950 && (
+          <div className="flex-1 justify-center items-center max-w-6xl  mx-auto">
+            <Suspense fallback={<div></div>}>
+              <Spline scene="https://prod.spline.design/IeERgy98oXnbzQC0/scene.splinecode" />
             </Suspense>
           </div>
-        ) : (
-          <div className="flex justify-center items-center">
-            <Image src={video} alt="Picture of the author" />
+        )}
+        {screenWidth < 950 && (
+          <div className="">
+            <Suspense fallback={<div></div>}>
+              <Image src={video} alt="Picture of the logo" priority />
+            </Suspense>
           </div>
         )}
       </div>
