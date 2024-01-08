@@ -26,7 +26,7 @@ export default function Header() {
           >
             {/* Logo */}
             <Link href="/" className="block" aria-label="Cruip">
-              <Image src={Logo} alt="Cruip" width={75} height={75} />
+              <Image src={Logo} alt="Cruip" width={100} height={100} />
             </Link>
           </div>
 
