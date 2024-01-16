@@ -14,11 +14,11 @@ export default function Testimonials() {
       Link: "http://www.scifestucp.com",
     },
     {
-      Name: "AI Mobile App",
+      Name: "Coach Abi",
       ImagePath: TestimonialImage02,
       Description:
         "Explore a futuristic chatbot for instant AI-driven assistance on your mobile app, making interactions smarter and more efficient.",
-      Link: "",
+      Link: "https://apps.apple.com/pk/app/coach-abi/id6474151705",
     },
   ];
 
