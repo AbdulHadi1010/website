@@ -94,7 +94,14 @@ export default function MobileMenu() {
               About us
             </Link>
           </li>
-
+          <li>
+            <Link
+              href="#our-projects-section"
+              className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+            >
+              Our Projects
+            </Link>
+          </li>
           <li>
             <Link
               href="#contac-us-section"

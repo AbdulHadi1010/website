@@ -6,15 +6,6 @@ import Image from "next/image";
 import Logo from "../../public/images/logo.png";
 
 export default function Header() {
-  function launchEmail() {
-    const to = "icodebugz@gmail.com";
-    const subject = "Request for Booking a Schedule";
-
-    const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(subject)}`;
-
-    // Open the default email client
-    window.location.href = mailtoLink;
-  }
   return (
     <header className="absolute w-full z-30 ">
       <div className="max-w-6xl  py-4 mx-auto px-4 sm:px-6">
@@ -58,7 +49,14 @@ export default function Header() {
                   About us
                 </Link>
               </li>
-
+              <li>
+                <Link
+                  href="#our-projects-section"
+                  className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                >
+                  Our Projects
+                </Link>
+              </li>
               {/* <ScrollToComponent target="contact-us-section"> */}
               <li>
                 <Link

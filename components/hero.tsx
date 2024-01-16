@@ -73,7 +73,13 @@ export default function Hero() {
       <div>
         {screenWidth > 950 && (
           <div className="flex-1 justify-center items-center max-w-6xl  mx-auto">
-            <Suspense fallback={<div></div>}>
+            <Suspense
+              fallback={
+                <div>
+                  <Image src={video} alt="Picture of the logo" priority />
+                </div>
+              }
+            >
               <Spline scene="https://prod.spline.design/IeERgy98oXnbzQC0/scene.splinecode" />
             </Suspense>
           </div>
