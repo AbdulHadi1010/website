@@ -1,16 +1,10 @@
 "use client";
 import React, { Suspense, useEffect, useState } from "react";
-import video from "../public/videos/animated.gif";
 import Image from "next/image";
-const Spline = React.lazy(() => import("@splinetool/react-spline"));
+import Lottie from "lottie-react";
+import Reel from "../public/images/Search.json";
 
 export default function Hero() {
-  const [screenWidth, setScreenWidth] = useState(0);
-  // const [screenBig, setScreenBig] = useState(false);
-  useEffect(() => {
-    typeof window !== "undefined" ? setScreenWidth(window.innerWidth) : 0;
-  }, []);
-
   return (
     <section>
       <div className="max-w-6xl  mx-auto px-4 sm:px-6 relative">
@@ -70,27 +64,9 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div>
-        {screenWidth > 950 && (
-          <div className="flex-1 justify-center items-center max-w-6xl  mx-auto">
-            <Suspense
-              fallback={
-                <div>
-                  <Image src={video} alt="Picture of the logo" priority />
-                </div>
-              }
-            >
-              <Spline scene="https://prod.spline.design/IeERgy98oXnbzQC0/scene.splinecode" />
-            </Suspense>
-          </div>
-        )}
-        {screenWidth < 950 && (
-          <div className="">
-            <Suspense fallback={<div></div>}>
-              <Image src={video} alt="Picture of the logo" priority />
-            </Suspense>
-          </div>
-        )}
+
+      <div className="flex-1 justify-center items-center max-w-2xl  mx-auto">
+        <Lottie animationData={Reel} loop={true} />
       </div>
     </section>
   );

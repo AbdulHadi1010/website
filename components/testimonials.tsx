@@ -7,7 +7,7 @@ import TestimonialImage02 from "@/public/images/projectImg.jpg";
 export default function Testimonials() {
   const items = [
     {
-      Name: "Notarizr",
+      Name: "SciFest UCP",
       ImagePath: TestimonialImage01,
       Description:
         "Dive into a virtual celebration of scientific wonders and engineering marvels at our university's Festival where innovation meets inspiration.",
