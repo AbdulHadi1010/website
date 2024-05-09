@@ -30,6 +30,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <meta
+        name="google-site-verification"
+        content="vI8A0db5lh9bZFGAQNB8bVOiSleMTNMKszu8sYRiu2c"
+      />
       <body
         className={`${inter.variable} ${architects_daughter.variable} font-inter antialiased bg-gray-900 text-gray-200 tracking-tight`}
       >
