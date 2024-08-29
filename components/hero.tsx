@@ -1,8 +1,8 @@
 "use client";
-import React, { Suspense, useEffect, useState } from "react";
-import Image from "next/image";
-import Lottie from "lottie-react";
-import Reel from "../public/images/Search.json";
+import React from "react";
+// import Image from "next/image";
+// import Lottie from "lottie-react";
+// import Reel from "../public/images/Search.json";
 
 export default function Hero() {
   return (
@@ -66,7 +66,7 @@ export default function Hero() {
       </div>
 
       <div className="flex-1 justify-center items-center max-w-2xl  mx-auto">
-        <Lottie animationData={Reel} loop={true} />
+        {/* <Lottie animationData={Reel} loop={true} /> */}
       </div>
     </section>
   );
